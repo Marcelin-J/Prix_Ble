@@ -22,10 +22,7 @@ st.set_page_config(layout="wide", page_title="Prédiction du Prix du Blé")
 st.markdown("## Simulateur de Prix du Blé")
 custom_text = st.text_area(
     "Ce simulateur est réalisé dans le cadre d'un projet agrosciences du cycle ingénieur par 5 étudiants",
-    "Ce site utilise 11 facteurs choisis car ils présentent en théorie un impact sur la variabilité du prix du blé. La simulation est basée sur un modèle de Régression Linéaire simple en se basant sur ces facteurs historiques et en fonction de leur corrélation avec le prix du blé. Il utilse une approche itérative pour gérer le prix décalé du mois précédent.",
-    " ",
-    "Vous pouvez sélectionner le nombre de mois pour l'estimation future entre 1 et 12.",
-    "Auteurs : Marcelin JOLLET, Geuthier DEFONTE, Elise DURLIN, Domitille CANESSON, Leo DE LA FAYE"
+    "Ce site utilise 11 facteurs choisis car ils présentent en théorie un impact sur la variabilité du prix du blé. La simulation est basée sur un modèle de Régression Linéaire simple en se basant sur ces facteurs historiques et en fonction de leur corrélation avec le prix du blé. Il utilse une approche itérative pour gérer le prix décalé du mois précédent. Vous pouvez sélectionner le nombre de mois pour l'estimation future entre 1 et 12. Auteurs : Marcelin JOLLET, Geuthier DEFONTE, Elise DURLIN, Domitille CANESSON, Leo DE LA FAYE"
 )
 st.write(custom_text)
 st.markdown("---") # Séparateur visuel
