@@ -21,8 +21,11 @@ st.set_page_config(layout="wide", page_title="Prédiction du Prix du Blé")
 # --- Zone de Texte Personnalisable ---
 st.markdown("## Simulateur de Prix du Blé")
 custom_text = st.text_area(
-    "Ajoutez votre texte d'introduction ici (vous pourrez le modifier sur GitHub)",
-    "Ce site utilise un modèle de Régression Linéaire simple pour prédire le prix du blé en se basant sur des facteurs historiques et une approche itérative pour gérer le prix décalé du mois précédent. Vous pouvez sélectionner le nombre de mois pour l'estimation future. Les visualisations sont générées sans utiliser Matplotlib."
+    "Ce simulateur est réalisé dans le cadre d'un projet agrosciences du cycle ingénieur par 5 étudiants",
+    "Ce site utilise 11 facteurs choisis car ils présentent en théorie un impact sur la variabilité du prix du blé. La simulation est basée sur un modèle de Régression Linéaire simple en se basant sur ces facteurs historiques et en fonction de leur corrélation avec le prix du blé. Il utilse une approche itérative pour gérer le prix décalé du mois précédent.",
+    " ",
+    "Vous pouvez sélectionner le nombre de mois pour l'estimation future entre 1 et 12.",
+    "Auteurs : Marcelin JOLLET, Geuthier DEFONTE, Elise DURLIN, Domitille CANESSON, Leo DE LA FAYE"
 )
 st.write(custom_text)
 st.markdown("---") # Séparateur visuel
@@ -31,8 +34,8 @@ st.markdown("---") # Séparateur visuel
 n_prediction_months = st.slider(
     "Nombre de mois à prédire dans le futur :",
     min_value=1,
-    max_value=24,
-    value=12,
+    max_value=12,
+    value=6,
     step=1
 )
 
